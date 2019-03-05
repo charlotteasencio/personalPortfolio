@@ -1,0 +1,538 @@
+/*NAVBAR*/
+#menuButton {
+    font-size: 36px; 
+    color: white;
+    cursor: pointer;
+    z-index: 201;
+    padding: 10px;
+    font-size: 32px;
+    position: fixed;
+}
+
+#menuButton.hidden {
+    visibility: hidden;
+}
+
+#menuButton:hover {
+    color: #dc143c;
+    transition: 1s;
+}
+
+#fullMenu.hidden {
+    width: 0px;
+    left: -400px;
+}
+
+#fullMenu {
+    height: calc(100vh);
+    background: rgb(28, 28, 28);
+    position: fixed;
+    transition: 1s;
+    width: 100%;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+}
+
+#openButton {
+    position: absolute;
+}
+
+#closeButton {
+    position: absolute;
+}
+
+#openButton.hidden {
+    display: none;
+}
+
+#closeButton.hidden {
+    display: none;
+}
+
+#menuOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 44px;
+}
+
+#menuOptions h2 {
+    color: #fff;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 94px;
+    margin-top: 30px;
+}
+
+#menuOptions h2:hover {
+    color: gray;
+    transition: 1s;
+}
+
+.inlineDiv {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrowIcon {
+    font-size: 54px;
+    margin-right: 70px;
+}
+
+#homeIcon {
+    color: rgb(220, 20, 60);
+}
+
+#homeIcon:hover {
+    color: white;
+    transition: 1s;
+}
+
+#aboutIcon {
+    color: rgb(117,175,168); 
+}
+
+#aboutIcon:hover {
+    color: white;
+    transition: 1s;
+}
+
+#projectsIcon {
+    color: rgb(217,180,73)
+}
+
+#projectsIcon:hover {
+    color: white;
+    transition: 1s;
+}
+
+#contactIcon {
+    color: teal;
+}
+
+#contactIcon:hover {
+    color: white;
+    transition: 1s;
+}
+
+@media only screen and (max-width: 1200px) {
+    #fullMenu {
+        height: 100%;
+    }
+
+    #menuOptions h2 {
+        color: white;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 54px;
+        margin-bottom: 30px;
+    }
+}
+
+/*HOME*/
+.section1 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: rgb(28, 28, 28);
+}
+
+.section1 h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 86px;
+    margin-bottom: 40px;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    border-radius: 10px;
+    top: 150px;
+    margin-left: 3%
+}
+
+.section1 h1:hover {
+    color: gray;
+    transition: 2s;
+    cursor: default;
+}
+
+.section1 h2 {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 34px;
+    cursor: default;
+    margin-bottom: 20px;
+    position: absolute;
+    z-index: 100;
+    top: 100px;
+    margin-left: 5px;
+    margin-left: 3%
+}
+
+.section1 h2:hover {
+    color: #dc143c;
+    transition: 2s;
+}
+
+#section1DownArrow {
+    font-size: 44px;
+    color: #dc143c; 
+    position: relative;
+    z-index: 1000;
+}
+
+#section1DownArrow:hover {
+    color: grey;
+}
+
+#contentDiv {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.section1 p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    max-width: 700px;
+    padding: 10px;
+    line-height: 26px;
+    cursor: default;
+    position: absolute;
+    z-index: 100;
+    top: 320px;
+    margin-left: 3%
+}
+
+/* @media only screen and (max-width: 1600px) {
+
+    #imagesDiv img {
+        width: 100%;
+    }
+
+    #mountains4 {
+        margin-left: -100px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+    #imagesDiv img {
+        width: auto;
+    }
+
+    #mountains3 {
+        margin-left: -300px;
+    }
+
+}
+
+@media only screen and (max-width: 660px) {
+    #stylingDiv {
+        margin-left: 0px;
+    }
+
+    .section1 h2 {
+        font-size: 30px;
+        margin-left: 10px
+    }
+
+    .section1 h1 {
+        font-size: 44px;
+        margin-left: 10px;
+    }
+
+    .section1 p {
+        font-size: 14px;
+        line-height: 22px;
+        top: 250px;
+    }
+
+    #mountains3 {
+       display: none;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+
+    #stylingDiv {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        margin-top: 50px;
+    }
+
+    #imagesDiv img {
+        width: 100%;
+    }
+
+    .section1 h2 {
+        font-size: 26px;
+        position: relative;
+        top: 0;
+        margin-bottom: 10px;
+    }
+
+    .section1 h1 {
+        font-size: 44px;
+        position: relative;
+        top: 0;
+        background: none;
+        color: white;
+        padding: 0;
+        border-radius: 0;
+        margin-bottom: 10px;
+    }
+
+    .section1 p {
+        font-size: 14px;
+        line-height: 20px;
+        top: 0;
+        border-radius: 0;
+        position: relative;
+        padding: 0px;
+        background: none;
+        opacity: .9;
+    }
+} */
+
+/*PROJECTS*/
+.section3 {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(72, 72, 72);
+    position: relative;
+    z-index: 101;
+}
+
+.section3 h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    margin-bottom: 40px;
+    display: none;
+}
+
+#projectLinks {
+    display: flex;
+    justify-content: center;
+    max-width: 1600px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.workCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    z-index: 100;
+}
+
+.workCard h2 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.workCard h2 i {
+    padding-left: 20px;
+}
+
+#section3DownArrow {
+    font-size: 44px;
+    color: teal;
+}
+
+#section3DownArrow:hover {
+    color: grey;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .workCard h2 {
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 1500px) {
+    .section3 {
+        height: auto;
+    }
+}
+
+/*CONTACT*/
+.section4 {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(28, 28, 28);
+    padding-top: 70px;
+    position: relative;
+    z-index: 101;
+}
+
+#section4Content {
+    flex-grow: 1;
+    margin-top: 70px;
+}
+
+#section4Content h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#section4Content form {
+    color: rgb(28, 28, 28);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.inputRow {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputRow label {
+    margin-bottom: 10px;
+}
+
+.inputRow input {
+    outline: none;
+    width: 500px;
+    height: 26px;
+}
+
+.inputRow input:focus {
+    outline: 1px solid crimson;
+    background: rgba(235, 235, 235, 0.089);
+}
+
+.inputRow textarea {
+    width: 800px;
+    height: 200px;
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+
+.inputRow textarea:focus {
+    border: 1px solid crimson;
+    background: rgba(235, 235, 235, 0.089);
+}
+
+#centerLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#emailIcon {
+    color: rgb(217,180,73);
+    font-size: 50px;
+}
+
+#resumeDiv {
+    text-decoration: none;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resumeDiv p {
+    text-decoration: none;
+    text-emphasis: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+}
+
+#section4UpArrow {
+    font-size: 90px;
+    padding-bottom: 100px;
+    color: crimson;
+    align-self: flex-end;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+#section4UpArrow:hover {
+    color: grey;
+}
+
+@media only screen and (max-width: 1200px) {
+    .section4 {
+        height: auto;
+    }
+
+    #section4Content form {
+        width: 500px;
+    }
+
+    #section4Content form textarea {
+        width: 500px;
+    }
+    
+    #section4UpArrow {
+        align-self: center;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    #section4Content form {
+        width: 350px;
+    }
+
+    #section4Content form input {
+        width: 350px;
+    }
+
+    #section4Content form textarea {
+        width: 350px;
+    }
+
+    #centerLinks {
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #section4Content form {
+        width: 300px;
+    }
+
+    #section4Content form input {
+        width: 300px;
+    }
+
+    #section4Content form textarea {
+        width: 300px;
+    }
+
+    #centerLinks {
+        margin-bottom: 40px;
+    }
+}
