@@ -129,8 +129,6 @@ function Circle(x, y, radius, color) {
         this.y += this.velocity.y;
     }
 
-
-
     // //define the circles that are drawn
      this.draw = function() {
         c.save()
@@ -144,93 +142,6 @@ function Circle(x, y, radius, color) {
      }
 
 }
-
-// let circleArray;
-// function init() {
-
-//     //make sure each time init is called on resize the array resets so you don't have millions of circles
-//     circleArray = [];
-
-//     function makeCircles(circlesAmount) {
-//         for (let i = 0; i < circlesAmount; i++) {
-//             const radius = 15
-//             let x =  Math.floor(Math.random() * (canvas.width-radius - radius + 1) + radius);
-//             let y =  Math.floor(Math.random() * (canvas.height-radius - radius + 1) + radius);
-//             let color = colors[Math.floor(Math.random() * colors.length)];
-
-//             if(i !== 0) {
-
-//                 for (let j = 0; j < circleArray.length; j++) {
-//                     if(findDistance(x,y, circleArray[j].x, circleArray[j].y) - radius * 2 < 0) {
-//                         //if they are then generate new x and y 
-//                         x = Math.floor(Math.random() * (canvas.width-radius - radius + 1) + radius);
-//                         y = Math.floor(Math.random() * (canvas.height-(radius) - radius + 1) + radius);
-
-//                         //start the loop over to make sure new particles generated aren't overlapping
-//                         j = -1
-//                     }
-//                 }
-
-//                 for(let k=0; k < circleArray.length; k++) {
-//                     if(circleArray[k].x + circleArray[k].radius * 2 >= rectangle.left && circleArray[k].x - circleArray[k].radius * 2 <= rectangle.right 
-//                         && circleArray[k].y - circleArray[k].radius * 2 <= rectangle.bottom && circleArray[k].y + circleArray[k].radius * 2 >= rectangle.top){
-//                             circleArray[k].x = Math.floor(Math.random() * (canvas.width - radius - radius + 1) + radius)
-//                             circleArray[k].y = Math.floor(Math.random() * (canvas.height - radius - radius + 1) + radius)
-                        
-//                         k = -1
-//                     }
-//                 }
-//             }
-
-//             //instantiating a new object, in this case a circle, and pushing it to an array at the same time used in place of [var circle = new Circle(x, y, dx, dy)]
-//             circleArray.push(new Circle(x, y, radius, color));
-//         }
-//     }
-
-//     if (canvas.height < 500 || canvas.width < 700) {
-//         makeCircles(20)
-//     } else if (canvas.height < 800 || canvas.width < 900) {
-//         makeCircles(50)
-//     } else if (canvas.height > 1100 || canvas.width > 1200) {
-//         makeCircles(100)
-//     } else {
-//         makeStars(800)
-//     }
-
-// }
-
-/*//this is the function that runs the animation
-function animate() {
-    requestAnimationFrame(animate);
-    //this clears the whole canvas each time so circle "moves" instead of staying
-    c.clearRect(0, 0, innerWidth, innerHeight);
-
-     //draw the circles on the screen
-     circleArray.forEach(circle => {
-         circle.update(circleArray)
-     })
-
-    // c.font = "90px Arial"
-    // c.fillStyle = 'White'
-    // c.fillText("Charlotte Asencio", canvas.width / 17, 200)
-}
-
-init();
-
-animate();*/
-
-// const canvas = document.querySelector('canvas')
-// const c = canvas.getContext('2d')
-
-// canvas.width = innerWidth
-// canvas.height = innerHeight
-
-// addEventListener('resize', () => {
-//     canvas.width = innerWidth
-//     canvas.height = innerHeight
-
-//     init()
-// })
 
 // Objects
 function Planet(x, y, radius, color,  velocity, distanceCenter){

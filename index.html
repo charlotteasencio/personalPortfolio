@@ -6,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Charlotte Asencio</title>
 </head>
 <body>
         
-    <div id="menuButton" onclick="openFullMenu()">X</div>
+    <div id="menuButton" onclick="openFullMenu()">
+        <i id="openButton" class="fas fa-bars"></i>
+        <i id="closeButton" class="fas fa-times hidden"></i>
+    </div>
+    
 
     <div id="fullMenu" class="hidden">
-        <mat-icon id="closeButton" class="hidden" (click)="openFullMenu()">close</mat-icon>-->
         <div id="menuOptions">
             <div class="inlineDiv"><h2>About</h2></div>
             <div class="inlineDiv"><h2>Projects</h2></div>
