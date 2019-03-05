@@ -471,7 +471,7 @@
 }
 
 #section4UpArrow {
-    font-size: 90px;
+    /*font-size: 90px;*/
     padding-bottom: 100px;
     color: crimson;
     align-self: flex-end;
