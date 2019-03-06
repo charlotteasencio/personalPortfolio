@@ -1,9 +1,22 @@
+
 openFullMenu = () => {
     document.getElementById('fullMenu').classList.toggle("hidden");
     document.getElementById('closeButton').classList.toggle('hidden');
     document.getElementById('openButton').classList.toggle('hidden');
 }
 
+scrollToAbout = (className) => {
+    const elementList = document.querySelectorAll('.'  + className);
+    const element = elementList[0] 
+    element.scrollIntoView({ behavior: 'smooth' })
+    openFullMenu()
+  }
+
+scrollToTop = (className) => {
+    const elementList = document.querySelectorAll('.'  + className);
+    const element = elementList[0] 
+    element.scrollIntoView({ behavior: 'smooth' })
+}
 const canvas = document.querySelector('canvas');
 
 canvas.width = window.innerWidth;

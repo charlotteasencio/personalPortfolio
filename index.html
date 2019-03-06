@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <title>Charlotte Asencio</title>
 </head>
 <body>
@@ -19,9 +21,9 @@
 
     <div id="fullMenu" class="hidden">
         <div id="menuOptions">
-            <div class="inlineDiv"><h2>About</h2></div>
-            <div class="inlineDiv"><h2>Projects</h2></div>
-            <div class="inlineDiv"><h2>Contact</h2></div>
+            <div class="inlineDiv"><h2 onclick="scrollToAbout('section1')">About</h2></div>
+            <div class="inlineDiv"><h2 onclick="scrollToAbout('section3')">Projects</h2></div>
+            <div class="inlineDiv"><h2 onclick="scrollToAbout('section4')">Contact</h2></div>
         </div>
     </div>
 
@@ -34,7 +36,7 @@
         <canvas></canvas>
     </div>
 
-    <div class="section3">
+    <div class="section3" id="section3">
         <h1>Projects</h1>
         <div id="projectLinks">
         <div class="workCard grid-item">
@@ -106,13 +108,13 @@
                   <button mat-raised-button color="primary" type="submit">Submit</button>
                 </form>
                 <div id="centerLinks">
-                  <a href="https://github.com/charlotteasencio" target="_blank"><span style="font-size: 3em; color: white"><i class="fab fa-linkedin"></i></span></a>
-                  <a href="https://www.linkedin.com/in/charlotte-asencio-7b84b164" target="_blank"><span style="font-size: 3em; color: white"><i class="fab fa-github"></i></span></a>
+                  <a href="https://github.com/charlotteasencio" target="_blank"><span style="font-size: 3em; color: white"><i class="fab fa-github"></i></span></a>
+                  <a href="https://www.linkedin.com/in/charlotte-asencio-7b84b164" target="_blank"><span style="font-size: 3em; color: white"><i class="fab fa-linkedin"></i></span></a>
                   <a href="mailto:charlotte.e.asencio@gmail.com"><span style="color: white; font-size: 3em"><i class="far fa-envelope"></i></span></a>
-                  <a href="assets/resume.pdf" id="resumeDiv"><i class="fa fa-file" style="color: white; font-size: 40px;" aria-hidden="true"></i><p>Resume</p></a>
+                  <a href="./assets/resumeCharlotteAsencio.pdf" target="_blank" id="resumeDiv"><i class="fa fa-file" style="color: white; font-size: 40px;" aria-hidden="true"></i><p>Resume</p></a>
                 </div>
         </div>
-        <div id="section4UpArrow"><span style="color: #dc143c; font-size: 4em"><i class="fas fa-angle-up"></i></span></div>
+        <div id="section4UpArrow" onclick="scrollToTop('section1')"><span style="color: #dc143c; font-size: 4em"><i class="fas fa-angle-up"></i></span></div>
     </div>
 <script src="assets/js/script.js"></script>
 </body>
