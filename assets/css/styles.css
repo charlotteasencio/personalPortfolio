@@ -443,6 +443,14 @@
     background: rgba(235, 235, 235, 0.089);
 }
 
+#submitButton {
+   background-color: rgb(117,175,168); 
+   border-radius: 10px;
+   padding: 10px;
+   border: none;
+   box-shadow: 1px 2px 2px gray;
+}
+
 #centerLinks {
     display: flex;
     justify-content: space-around;
@@ -498,6 +506,7 @@
     
     #section4UpArrow {
         align-self: center;
+        margin-right: 0;
     }
 
 }
