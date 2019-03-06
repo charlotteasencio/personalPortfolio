@@ -129,6 +129,17 @@
         font-size: 54px;
         margin-bottom: 30px;
     }
+
+    #menuButton {
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #menuButton {
+        position: absolute;
+        font-size: 22px;
+    }
 }
 
 /*HOME*/
@@ -209,6 +220,28 @@
 @media only screen and (max-width: 660px) {
     #stylingDiv {
         margin-left: 0px;
+    }
+
+    #heading1 {
+        font-size: 22px;
+        margin-left: 10px;
+    }
+
+    .section1 h1 {
+        font-size: 26px;
+        margin-left: 10px;
+    }
+
+    .section1 p {
+        font-size: 14px;
+        line-height: 22px;
+        top: 250px;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    .section1 {
+        height: 500px;
     }
 
     #heading1 {
