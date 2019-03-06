@@ -323,11 +323,11 @@ function init() {
     }
 
     if (canvas.height < 500 || canvas.width < 700) {
-        makeCircles(20)
+        makeCircles(30)
     } else if (canvas.height < 800 || canvas.width < 900) {
-        makeCircles(50)
+        makeCircles(60)
     } else {
-        makeCircles(100)
+        makeCircles(120)
     }
 
 }
