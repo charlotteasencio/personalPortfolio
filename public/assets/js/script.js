@@ -253,27 +253,53 @@ function init() {
     const allX = canvas.width / 2
     const allY = canvas.height / 2
 
-    const planet1dist = canvas.height / 15
-    const planet2dist = canvas.height / 11
-    const planet3dist = canvas.height / 7.6
-    const planet4dist = canvas.height / 5.8
-    const planet5dist = canvas.height / 4.4
-    const planet6dist = canvas.height / 3.2
-    const planet7dist = canvas.height / 2.5
-    const planet8dist = canvas.height / 2.2
+    const planet1dist = canvas.width / 15
+    const planet2dist = canvas.width / 11
+    const planet3dist = canvas.width / 7.6
+    const planet4dist = canvas.width / 5.8
+    const planet5dist = canvas.width / 4.4
+    const planet6dist = canvas.width / 3.2
+    const planet7dist = canvas.width / 2.5
+    const planet8dist = canvas.width / 2.2
 
     let colors = ["#dc143c", "#75afa8", "#d9b449", "#008080"];
 
+    if(canvas.width >= 800) {
+
     sun = new Sun(allX, allY, 35, colors[2])
 
-    planet1 = new Planet(allX, allY, 7, colors[0], 0.01607, planet1dist)
-    planet2 = new Planet(allX, allY, 10, colors[1], 0.01174, planet2dist)
-    planet3 = new Planet(allX, allY, 15, colors[2], 0.01, planet3dist)
-    planet4 = new Planet(allX, allY, 12, colors[3], 0.00802, planet4dist)
-    planet5 = new Planet(allX, allY, 24, colors[0], 0.00434, planet5dist)
-    planet6 = new Planet(allX, allY, 30, colors[1], 0.00323, planet6dist)
-    planet7 = new Planet(allX, allY, 20, colors[2], 0.00228, planet7dist)
-    planet8 = new Planet(allX, allY, 22, colors[3], 0.00182, planet8dist)
+    planet1 = new Planet(allX, allY, 10, colors[0], 0.01607, planet1dist)
+    planet2 = new Planet(allX, allY, 13, colors[1], 0.01174, planet2dist)
+    planet3 = new Planet(allX, allY, 17, colors[2], 0.01, planet3dist)
+    planet4 = new Planet(allX, allY, 15, colors[3], 0.00802, planet4dist)
+    planet5 = new Planet(allX, allY, 28, colors[0], 0.00434, planet5dist)
+    planet6 = new Planet(allX, allY, 36, colors[1], 0.00323, planet6dist)
+    planet7 = new Planet(allX, allY, 32, colors[2], 0.00228, planet7dist)
+    planet8 = new Planet(allX, allY, 28, colors[3], 0.00182, planet8dist)
+
+    } else if (canvas.width < 800 && canvas.width > 600) {
+        sun = new Sun(allX, allY, 20, colors[2])
+
+        planet1 = new Planet(allX, allY, 7, colors[0], 0.01607, planet1dist)
+        planet2 = new Planet(allX, allY, 10, colors[1], 0.01174, planet2dist)
+        planet3 = new Planet(allX, allY, 14, colors[2], 0.01, planet3dist)
+        planet4 = new Planet(allX, allY, 12, colors[3], 0.00802, planet4dist)
+        planet5 = new Planet(allX, allY, 20, colors[0], 0.00434, planet5dist)
+        planet6 = new Planet(allX, allY, 26, colors[1], 0.00323, planet6dist)
+        planet7 = new Planet(allX, allY, 23, colors[2], 0.00228, planet7dist)
+        planet8 = new Planet(allX, allY, 20, colors[3], 0.00182, planet8dist)
+    } else if(canvas.width <= 600) {
+        sun = new Sun(allX, allY, 12, colors[2])
+
+        planet1 = new Planet(allX, allY, 2, colors[0], 0.01607, planet1dist)
+        planet2 = new Planet(allX, allY, 4, colors[1], 0.01174, planet2dist)
+        planet3 = new Planet(allX, allY, 6, colors[2], 0.01, planet3dist)
+        planet4 = new Planet(allX, allY, 8.5, colors[3], 0.00802, planet4dist)
+        planet5 = new Planet(allX, allY, 11, colors[0], 0.00434, planet5dist)
+        planet6 = new Planet(allX, allY, 13, colors[1], 0.00323, planet6dist)
+        planet7 = new Planet(allX, allY, 14.5, colors[2], 0.00228, planet7dist)
+        planet8 = new Planet(allX, allY, 11, colors[3], 0.00182, planet8dist)
+    }
 
     orbit1 = new Orbit(allX, allY, planet1dist, "black")
     orbit2 = new Orbit(allX, allY, planet2dist, "black")
