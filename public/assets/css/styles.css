@@ -13,10 +13,10 @@
     visibility: hidden;
 }
 
-#menuButton:hover {
+/*#menuButton:hover {
     color: #dc143c;
     transition: 1s;
-}
+}*/
 
 #fullMenu.hidden {
     width: 0px;
@@ -310,13 +310,33 @@
     padding-left: 20px;
 }
 
-#section3DownArrow {
-    font-size: 44px;
-    color: teal;
+.workCard img {
+    position: relative;
+    z-index: 100;
+    margin-top: 20px;
 }
 
-#section3DownArrow:hover {
-    color: grey;
+#spaceFactsOverlay.hidden {
+    display: none
+}
+
+#spaceFactsOverlay {
+    width: 300px;
+    height: 300px;
+    top: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#spaceFactsOverlay p {
+    padding: 10px;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -17,6 +17,24 @@ scrollToTop = (className) => {
     const element = elementList[0] 
     element.scrollIntoView({ behavior: 'smooth' })
 }
+
+const projectDiv = document.getElementById('projectImage')
+const projectDivRect = projectDiv.getBoundingClientRect()
+
+const spaceOverlay = document.getElementById('spaceFactsOverlay')
+
+showOverlay = () => {
+    spaceOverlay.classList.remove('hidden')
+    spaceOverlay.style.top = projectDivRect.top;
+    console.log(projectDivRect)
+    spaceOverlay.style.left = projectDiv.left;
+    console.log(spaceOverlay.style)
+}
+
+hideOverlay = () => {
+    document.getElementById('spaceFactsOverlay').classList.add('hidden')
+}
+
 const canvas = document.querySelector('canvas');
 
 canvas.width = window.innerWidth;
