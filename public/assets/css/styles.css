@@ -13,10 +13,6 @@
     visibility: hidden;
 }
 
-/*#menuButton:hover {
-    color: #dc143c;
-    transition: 1s;
-}*/
 
 #fullMenu.hidden {
     width: 0px;
@@ -150,71 +146,30 @@
     background: rgb(28, 28, 28);
 }
 
-.section1 h1 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 86px;
-    margin-bottom: 40px;
-    color: white;
+#section1Content {
     position: absolute;
-    z-index: 100;
-    border-radius: 10px;
-    top: 150px;
-    margin-left: 3%
-}
-
-.section1 h1:hover {
-    color: gray;
-    transition: 2s;
-    cursor: default;
-}
-
-.section1 h2 {
-    color: white;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 34px;
-    cursor: default;
-    margin-bottom: 20px;
-    position: absolute;
-    z-index: 100;
-    top: 100px;
-    margin-left: 5px;
-    margin-left: 3%
-}
-
-.section1 h2:hover {
-    color: #dc143c;
-    transition: 2s;
-}
-
-#section1DownArrow {
-    font-size: 44px;
-    color: #dc143c; 
-    position: relative;
-    z-index: 1000;
-}
-
-#section1DownArrow:hover {
-    color: grey;
-}
-
-#contentDiv {
-    text-align: center;
-    flex-grow: 1;
-}
-
-.section1 p {
+    display: flex;
+    flex-direction: column;
     color: white;
     font-family: 'Roboto', sans-serif;
+    top: 100px;
+    margin-left: 3%;
+}
+
+#section1Content h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+#section1Content h1 {
+    font-size: 86px;
+    margin-bottom: 50px;
+}
+
+#section1Content p {
     font-size: 18px;
-    text-align: left;
-    max-width: 700px;
-    padding: 10px;
     line-height: 26px;
-    cursor: default;
-    position: absolute;
-    z-index: 100;
-    top: 320px;
-    margin-left: 3%
+    max-width: 700px;
 }
 
 @media only screen and (max-width: 660px) {
@@ -222,17 +177,17 @@
         margin-left: 0px;
     }
 
-    #heading1 {
+    #section1Content h2 {
         font-size: 24px;
         margin-left: 10px;
     }
 
-    #heading2 {
+    #section1Content h1{
         font-size: 56px;
         margin-left: 10px;
     }
 
-    .section1 p {
+    #section1Content p {
         font-size: 14px;
         line-height: 22px;
         top: 250px;
@@ -244,17 +199,17 @@
         height: 500px;
     }
 
-    #heading1 {
+    #section1Content h2 {
         font-size: 24px;
         margin-left: 10px;
     }
 
-    #heading2 {
+    #section1Content h1 {
         font-size: 56px;
         margin-left: 10px;
     }
 
-    .section1 p {
+    #section1Content p {
         font-size: 14px;
         line-height: 22px;
         top: 250px;

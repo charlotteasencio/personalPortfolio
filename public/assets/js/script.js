@@ -140,6 +140,19 @@ function Circle(x, y, radius, color) {
             if(findDistance(this.x,this.y, circleArray[i].x, circleArray[i].y) - this.radius * 2 < 0) {
                 collision(this, circleArray[i]);
             }
+
+            if(findDistance(this.x, this.y, circleArray[i].x, circleArray[i].y) - this.radius * 2 < 50) {
+                c.save();
+                c.beginPath();
+                c.strokeStyle = "rgba(255, 255, 255, 0.3)"
+                c.shadowColor = '#e3eaef'
+                c.lineWidth = 0.3
+                c.moveTo(this.x, this.y);
+                c.lineTo(circleArray[i].x, circleArray[i].y);
+                c.stroke()
+                c.restore();
+            }
+    
         }
 
         //keep things from going off sides
@@ -390,7 +403,7 @@ function init() {
     }
 
     if (canvas.height < 500 || canvas.width < 700) {
-        makeCircles(0)
+        makeCircles(20)
     } else if (canvas.height < 800 || canvas.width < 900) {
         makeCircles(60)
     } else {
