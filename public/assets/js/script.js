@@ -164,10 +164,10 @@ function Circle(x, y, radius, color) {
             this.velocity.y = -this.velocity.y;
         }
 
-        if(this.x + this.radius > rectangle.left && this.x - this.radius < rectangle.right && this.y + this.radius + 20 > rectangle.top && this.y - this.radius - 20 < rectangle.bottom) {
-            this.velocity.x = -this.velocity.x;
-            this.velocity.y = -this.velocity.y;
-        }
+        // if(canvas.width > 400 && this.x + this.radius > rectangle.left && this.x - this.radius < rectangle.right && this.y + this.radius + 20 > rectangle.top && this.y - this.radius - 20 < rectangle.bottom) {
+        //     this.velocity.x = -this.velocity.x;
+        //     this.velocity.y = -this.velocity.y;
+        // }
         //adds the velocity to the x and y value to make things move
         this.x += this.velocity.x;
         this.y += this.velocity.y;
