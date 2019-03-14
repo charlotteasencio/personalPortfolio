@@ -271,27 +271,13 @@
     margin-top: 20px;
 }
 
-#spaceFactsOverlay.hidden {
-    display: none
-}
-
-#spaceFactsOverlay {
-    width: 300px;
-    height: 300px;
-    top: 60px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    position: absolute;
-    z-index: 200;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.workCard p {
+    max-width: 300px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-#spaceFactsOverlay p {
-    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
 }
 
 @media only screen and (max-width: 1200px) {
