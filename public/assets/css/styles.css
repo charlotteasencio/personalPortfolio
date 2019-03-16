@@ -423,8 +423,12 @@
         width: 500px;
     }
 
+    #section4Content form input {
+        width: 95%;
+    }
+
     #section4Content form textarea {
-        width: 500px;
+        width: 95%;
     }
     
     #section4UpArrow {
@@ -436,10 +440,6 @@
 
 @media only screen and (max-width: 700px) {
     #section4Content form {
-        width: 350px;
-    }
-
-    #section4Content form input {
         width: 350px;
     }
 
@@ -456,11 +456,7 @@
     #section4Content form {
         width: 300px;
     }
-
-    #section4Content form input {
-        width: 300px;
-    }
-
+    
     #section4Content form textarea {
         width: 300px;
     }
