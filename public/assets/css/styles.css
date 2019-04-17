@@ -146,6 +146,13 @@
     background: rgb(28, 28, 28);
 }
 
+#overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 28, 28, 0.37);
+    position: absolute;
+}
+
 #section1Content {
     position: absolute;
     display: flex;
@@ -154,6 +161,7 @@
     font-family: 'Roboto', sans-serif;
     top: 100px;
     margin-left: 3%;
+    z-index: 1;
 }
 
 #section1Content h2 {

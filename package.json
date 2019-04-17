@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/charlotteasencio/starsPortfolio/issues"
   },
-  "homepage": "https://github.com/charlotteasencio/starsPortfolio#readme"
+  "homepage": "https://github.com/charlotteasencio/starsPortfolio#readme",
+  "dependencies": {
+    "firebase": "^5.9.4",
+    "firebase-tools": "^6.6.0"
+  }
 }
