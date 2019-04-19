@@ -455,10 +455,6 @@
     #section4Content form textarea {
         width: 350px;
     }
-
-    #centerLinks {
-        margin-bottom: 40px;
-    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -468,9 +464,5 @@
     
     #section4Content form textarea {
         width: 300px;
-    }
-
-    #centerLinks {
-        margin-bottom: 40px;
     }
 }
