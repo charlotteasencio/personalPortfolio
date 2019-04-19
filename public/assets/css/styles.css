@@ -308,18 +308,16 @@
 
 /*CONTACT*/
 .section4 {
-    height: 1000px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: rgb(28, 28, 28);
-    padding-top: 70px;
     position: relative;
     z-index: 101;
 }
 
 #section4Content {
-    flex-grow: 1;
     margin-top: 70px;
 }
 
@@ -410,17 +408,20 @@
 }
 
 #section4UpArrow {
-    /*font-size: 90px;*/
-    padding-bottom: 100px;
     color: crimson;
     align-self: flex-end;
     margin-right: 100px;
     cursor: pointer;
 }
 
-#section4UpArrow:hover {
-    color: grey;
+.section4 a {
+    margin-bottom: 30px;
+    color: rgb(117,175,168);
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Roboto Condensed',sans-serif;
 }
+
 
 @media only screen and (max-width: 1200px) {
     .section4 {
