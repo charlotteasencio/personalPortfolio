@@ -21,7 +21,7 @@ scrollToTop = (className) => {
 const canvas = document.querySelector('canvas');
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight - 80;
+canvas.height = window.innerHeight - 100;
 
 const c = canvas.getContext('2d');
 
@@ -389,7 +389,7 @@ function init() {
     }
 
     if (canvas.height < 500 || canvas.width < 700) {
-        makeCircles(20)
+        makeCircles(40)
     } else if (canvas.height < 800 || canvas.width < 900) {
         makeCircles(80)
     } else {
