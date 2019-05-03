@@ -149,51 +149,38 @@
 #overlay {
     width: 100%;
     height: 100%;
-    background: rgba(29, 28, 28, 0.37);
+    background: rgba(29, 28, 28, 0.47);
     position: absolute;
 }
 
 #section1Content {
     position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
     font-family: 'Roboto', sans-serif;
-    top: 100px;
-    margin-left: 3%;
+    font-weight: lighter;
     z-index: 1;
-}
-
-#section1Content h2 {
-    font-size: 34px;
-    margin-bottom: 30px;
-}
-
-#section1Content h1 {
-    font-size: 86px;
-    margin-bottom: 50px;
 }
 
 #section1Content p {
     font-size: 18px;
     line-height: 26px;
     max-width: 700px;
+    padding: 0 5px;
+    margin-bottom: 15px;
+}
+
+#section1Content p span {
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 660px) {
-    #stylingDiv {
-        margin-left: 0px;
-    }
-
-    #section1Content h2 {
-        font-size: 24px;
-        margin-left: 10px;
-    }
-
-    #section1Content h1{
-        font-size: 56px;
-        margin-left: 10px;
-    }
 
     #section1Content p {
         font-size: 14px;
@@ -207,16 +194,6 @@
         height: 500px;
     }
 
-    #section1Content h2 {
-        font-size: 24px;
-        margin-left: 10px;
-    }
-
-    #section1Content h1 {
-        font-size: 56px;
-        margin-left: 10px;
-    }
-
     #section1Content p {
         font-size: 14px;
         line-height: 22px;
@@ -227,7 +204,7 @@
 
 /*PROJECTS*/
 .section3 {
-    height: 1000px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,20 +213,11 @@
     z-index: 101;
 }
 
-.section3 h1 {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 45px;
-    margin-bottom: 40px;
-    display: none;
-}
-
 #projectLinks {
     display: flex;
     justify-content: center;
-    max-width: 1600px;
     flex-wrap: wrap;
-    flex-grow: 1;
+    padding: 20px 0;
 }
 
 .workCard {
@@ -259,14 +227,18 @@
     align-items: center;
     margin: 20px;
     z-index: 100;
+    background: rgb(72, 72, 72);
+    padding: 20px;
+    box-shadow: 5px 5px 12px rgb(28, 28, 28);
 }
 
 .workCard h2 {
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
+    font-size: 26px;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .workCard h2 i {
@@ -274,9 +246,9 @@
 }
 
 .workCard img {
-    position: relative;
-    z-index: 100;
-    margin-top: 20px;
+    object-fit: cover;
+    width: 500px;
+    height: 300px;
 }
 
 .workCard p {
@@ -288,22 +260,24 @@
     font-size: 14px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 600px) {
 
-    .workCard h2 {
-        color: white;
-        font-family: 'Roboto', sans-serif;
-        font-size: 32px;
-        display: flex;
-        align-items: center;
+    .workCard img {
+        object-fit: cover;
+        width: 320px;
+        height: 180px;
     }
 
 }
 
-@media only screen and (max-width: 1500px) {
-    .section3 {
-        height: auto;
+@media only screen and (max-width: 360px) {
+
+    .workCard img {
+        object-fit: cover;
+        width: 260px;
+        height: 160px;
     }
+
 }
 
 /*CONTACT*/
