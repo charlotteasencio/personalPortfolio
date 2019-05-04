@@ -278,6 +278,10 @@
   .flip-card-front {
     background-color: rgb(95, 95, 95);
   }
+
+  .flip-card-front .smallScreenText {
+      display: none;
+  }
  
   .flip-card-back {
     background-color: rgb(95, 95, 95);
@@ -315,10 +319,15 @@
 
   .flip-card-back p {
       padding: 0 10px;
+      font-family: 'Raleway', sans-serif;
+      line-height: 18px;
   }
 
   .flip-card-back h5 {
       margin-top: 20px;
+  }
+  .smallScreenText {
+      display: none;
   }
 
 @media only screen and (max-width: 600px) {
@@ -335,6 +344,32 @@
         width: 300px;
     }
 
+}
+
+@media (hover: none) {
+
+    .smallScreenText {
+        display: flex;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+      }
+
+    .workCard .smallScreenText {
+        text-align: center;
+        color: white;
+    }
+
+    .workCard p {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        margin: 10px 5px 20px 5px;
+    }
+
+    .flip-card-back {
+        display: none;
+    }
 }
 
 /*CONTACT*/
