@@ -286,28 +286,31 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     font-family: 'Roboto Condensed',sans-serif;
   }
 
   .flip-card-back a {
-      text-decoration: underline;
-      color: white;
-      margin: 10px 0 0 10px;
+      text-decoration: none;
+      color: rgb(72, 72, 72);
   }
 
-  .demo, .sourceCode {
-    margin: 10px;
+  .button {
+        background-color: rgb(117,175,168);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin-bottom: 15px;
   }
 
   .codeLinks {
-      width: 100%;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
-  }
-
-  .centerText {
-      flex-grow: 2;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
   }
 
   .flip-card-back p {
@@ -318,32 +321,18 @@
       margin-top: 20px;
   }
 
-  .techImg {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .techImg i {
-      font-size: 20px;
-  }
-
 @media only screen and (max-width: 600px) {
 
     .flip-card {
         width: 320px;
-        height: 180px;
     }
 
 }
 
 @media only screen and (max-width: 360px) {
 
-    .workCard img {
-        object-fit: cover;
-        width: 260px;
-        height: 160px;
+    .flip-card {
+        width: 300px;
     }
 
 }
