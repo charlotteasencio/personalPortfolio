@@ -85,7 +85,7 @@
 /*position elements that move on scroll*/
 #spaceShuttle {
     position: absolute;
-    bottom: -20px;
+    bottom: 0px;
     left: 20px;
 }
 
@@ -97,7 +97,7 @@
 
 #iss {
     position: absolute;
-    bottom: -20px;
+    bottom: 0px;
     right: 0px;
 }
 
@@ -390,60 +390,6 @@
 }
 
 /*media queries*/
-
-@media only screen and (max-width: 400px) {
-
-    .flip-card {
-        width: 300px;
-    }
-
-    #section4Content form {
-        width: 300px;
-    }
-    
-    #section4Content form textarea {
-        width: 300px;
-    }
-}
-
-@media only screen and (max-height: 600px) {
-    .section1 {
-        height: 500px;
-    }
-
-    #section1Content p {
-        font-size: 14px;
-        line-height: 22px;
-        top: 250px;
-    }
-
-    .flip-card {
-        width: 320px;
-    }
-
-}
-
-@media only screen and (max-width: 700px) {
-    #menuButton {
-        position: absolute;
-        font-size: 22px;
-    }
-
-    #section4Content form {
-        width: 350px;
-    }
-
-    #section4Content form textarea {
-        width: 350px;
-    }
-
-    #section1Content p {
-        font-size: 14px;
-        line-height: 22px;
-        top: 250px;
-    }
-}
-
 @media only screen and (max-width: 1200px) {
     #fullMenu {
         height: 100%;
@@ -483,6 +429,48 @@
 
 }
 
+@media only screen and (max-width: 700px) {
+    #menuButton {
+        position: absolute;
+        font-size: 22px;
+    }
+
+    #section4Content form {
+        width: 350px;
+    }
+
+    #section4Content form textarea {
+        width: 350px;
+    }
+
+    #section1Content p {
+        font-size: 14px;
+        line-height: 22px;
+        top: 250px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .flip-card {
+        width: 320px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .flip-card {
+        width: 300px;
+    }
+
+    #section4Content form {
+        width: 300px;
+    }
+    
+    #section4Content form textarea {
+        width: 300px;
+    }
+}
+
 /*remove card effects on devices that don't support hover*/
 @media (hover: none) {
 
@@ -508,6 +496,18 @@
     }
 
     .flip-card-back {
+        display: none;
+    }
+
+    #spaceShuttle {
+        display: none;
+    }
+    
+    #saturn {
+        display: none;
+    }
+    
+    #iss {
         display: none;
     }
 }
