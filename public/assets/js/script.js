@@ -10,7 +10,7 @@ scrollToAbout = (className) => {
     const element = elementList[0] 
     element.scrollIntoView({ behavior: 'smooth' })
     openFullMenu()
-  }
+}
 
 scrollToTop = (className) => {
     const elementList = document.querySelectorAll('.'  + className);

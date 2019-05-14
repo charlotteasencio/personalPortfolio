@@ -78,66 +78,6 @@
     margin-right: 70px;
 }
 
-#homeIcon {
-    color: rgb(220, 20, 60);
-}
-
-#homeIcon:hover {
-    color: white;
-    transition: 1s;
-}
-
-#aboutIcon {
-    color: rgb(117,175,168); 
-}
-
-#aboutIcon:hover {
-    color: white;
-    transition: 1s;
-}
-
-#projectsIcon {
-    color: rgb(217,180,73)
-}
-
-#projectsIcon:hover {
-    color: white;
-    transition: 1s;
-}
-
-#contactIcon {
-    color: teal;
-}
-
-#contactIcon:hover {
-    color: white;
-    transition: 1s;
-}
-
-@media only screen and (max-width: 1200px) {
-    #fullMenu {
-        height: 100%;
-    }
-
-    #menuOptions h2 {
-        color: white;
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 54px;
-        margin-bottom: 30px;
-    }
-
-    #menuButton {
-        position: absolute;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    #menuButton {
-        position: absolute;
-        font-size: 22px;
-    }
-}
-
 /*HOME*/
 .section1 {
     height: auto;
@@ -179,28 +119,6 @@
 #section1Content p span {
     font-weight: bold;
 }
-
-@media only screen and (max-width: 660px) {
-
-    #section1Content p {
-        font-size: 14px;
-        line-height: 22px;
-        top: 250px;
-    }
-}
-
-@media only screen and (max-height: 600px) {
-    .section1 {
-        height: 500px;
-    }
-
-    #section1Content p {
-        font-size: 14px;
-        line-height: 22px;
-        top: 250px;
-    }
-}
-
 
 /*PROJECTS*/
 .section3 {
@@ -248,128 +166,83 @@
 }
 
 .flip-card {
-    background-color: transparent;
+    background-color: black;
     width: 500px;
     height: 300px;
     perspective: 1000px;
   }
 
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
+.flip-card-inner {
     height: 100%;
-    text-align: center;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    box-shadow: 5px 5px 10px rgba(12, 12, 12, 0.459);
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
+    display: flex;
+}
+
+.flip-card-front {
+    opacity: 1;
+    display: block;
     width: 100%;
-    height: 100%;
+    height: fill;
+    transition: .5s ease;
     backface-visibility: hidden;
-  }
+}
+  
+.flip-card-back {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+  
+.flip-card:hover .flip-card-front {
+    opacity: 0.05;
+}
+  
+.flip-card:hover .flip-card-back {
+    opacity: 1;
+}
 
-  .flip-card-front {
-    background-color: rgb(95, 95, 95);
-  }
+.flip-card-back h5 {
+    margin-top: 20px;
+}
 
-  .flip-card-front .smallScreenText {
-      display: none;
-  }
- 
-  .flip-card-back {
-    background-color: rgb(95, 95, 95);
-    color: white;
-    transform: rotateY(180deg);
+.flip-card-back a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.flip-card-back p {
+    font-family: 'Raleway', sans-serif;
+    line-height: 18px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.smallScreenText {
+    display: none;
+}
+
+.codeLinks {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    font-family: 'Roboto Condensed',sans-serif;
-  }
-
-  .flip-card-back a {
-      text-decoration: none;
-      color: rgb(72, 72, 72);
-  }
-
-  .button {
-        background-color: rgb(117,175,168);
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 5px 10px;
-        margin-bottom: 15px;
-  }
-
-  .codeLinks {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-  }
-
-  .flip-card-back p {
-      padding: 0 10px;
-      font-family: 'Raleway', sans-serif;
-      line-height: 18px;
-  }
-
-  .flip-card-back h5 {
-      margin-top: 20px;
-  }
-  .smallScreenText {
-      display: none;
-  }
-
-@media only screen and (max-width: 600px) {
-
-    .flip-card {
-        width: 320px;
-    }
-
+    align-items: center;
+    margin-top: 25px;
 }
 
-@media only screen and (max-width: 360px) {
-
-    .flip-card {
-        width: 300px;
-    }
-
-}
-
-@media (hover: none) {
-
-    .smallScreenText {
-        display: flex;
-    }
-
-    .flip-card:hover .flip-card-inner {
-        transform: none;
-      }
-
-    .workCard .smallScreenText {
-        text-align: center;
-        color: white;
-    }
-
-    .workCard p {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 300;
-        margin: 10px 5px 20px 5px;
-    }
-
-    .flip-card-back {
-        display: none;
-    }
+.button {
+    background-color: rgb(117,175,168);
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-bottom: 15px;
 }
 
 /*CONTACT*/
@@ -488,6 +361,60 @@
     font-family: 'Roboto Condensed',sans-serif;
 }
 
+/*media queries*/
+
+@media only screen and (max-width: 400px) {
+
+    .flip-card {
+        width: 300px;
+    }
+
+    #section4Content form {
+        width: 300px;
+    }
+    
+    #section4Content form textarea {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    .section1 {
+        height: 500px;
+    }
+
+    #section1Content p {
+        font-size: 14px;
+        line-height: 22px;
+        top: 250px;
+    }
+
+    .flip-card {
+        width: 320px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    #menuButton {
+        position: absolute;
+        font-size: 22px;
+    }
+
+    #section4Content form {
+        width: 350px;
+    }
+
+    #section4Content form textarea {
+        width: 350px;
+    }
+
+    #section1Content p {
+        font-size: 14px;
+        line-height: 22px;
+        top: 250px;
+    }
+}
 
 @media only screen and (max-width: 1200px) {
     .section4 {
@@ -513,22 +440,46 @@
 
 }
 
-@media only screen and (max-width: 700px) {
-    #section4Content form {
-        width: 350px;
+@media only screen and (max-width: 1200px) {
+    #fullMenu {
+        height: 100%;
     }
 
-    #section4Content form textarea {
-        width: 350px;
+    #menuOptions h2 {
+        color: white;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 54px;
+        margin-bottom: 30px;
+    }
+
+    #menuButton {
+        position: absolute;
     }
 }
 
-@media only screen and (max-width: 400px) {
-    #section4Content form {
-        width: 300px;
+@media (hover: none) {
+
+    .smallScreenText {
+        display: flex;
+        max-width: 500px;
     }
-    
-    #section4Content form textarea {
-        width: 300px;
+
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+      }
+
+    .workCard .smallScreenText {
+        text-align: center;
+        color: white;
+    }
+
+    .workCard p {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        margin: 10px 5px 20px 5px;
+    }
+
+    .flip-card-back {
+        display: none;
     }
 }
