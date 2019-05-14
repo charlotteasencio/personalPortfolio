@@ -1,10 +1,11 @@
-
+/*open menu on click*/
 openFullMenu = () => {
     document.getElementById('fullMenu').classList.toggle("hidden");
     document.getElementById('closeButton').classList.toggle('hidden');
     document.getElementById('openButton').classList.toggle('hidden');
 }
 
+/*smooth scrolling to each section*/
 scrollToAbout = (className) => {
     const elementList = document.querySelectorAll('.'  + className);
     const element = elementList[0] 
@@ -18,6 +19,7 @@ scrollToTop = (className) => {
     element.scrollIntoView({ behavior: 'smooth' })
 }
 
+/*define canvas and other elements sizes*/
 const canvas = document.querySelector('canvas');
 
 canvas.width = window.innerWidth;
@@ -34,9 +36,7 @@ headerPDiv.style.width = canvas.width / 3;
 
 let rectangle = headerPDiv.getBoundingClientRect()
 
-console.log(rectangle)
-
-
+/*re-run animation on resize of canvas to account for new size*/
 addEventListener('resize', () => {
     canvas.height = innerHeight - 80;
     canvas.width = innerWidth;
@@ -45,6 +45,7 @@ addEventListener('resize', () => {
     init();
 })
 
+//code to find the distance between two dots so they 'bounce' realistically
 function findDistance(x1, y1, x2, y2) {
     let distance1 = x2-x1
     let distance2 = y2-y1
@@ -100,7 +101,7 @@ function findDistance(x1, y1, x2, y2) {
         }
     }
 
-//declare object
+//declare 'star' object
 function Circle(x, y, radius, color) {
     this.x = x;
     this.y = y; 
