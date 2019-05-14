@@ -78,67 +78,19 @@
     margin-right: 70px;
 }
 
-#homeIcon {
-    color: rgb(220, 20, 60);
-}
-
-#homeIcon:hover {
-    color: white;
-    transition: 1s;
-}
-
-#aboutIcon {
-    color: rgb(117,175,168); 
-}
-
-#aboutIcon:hover {
-    color: white;
-    transition: 1s;
-}
-
-#projectsIcon {
-    color: rgb(217,180,73)
-}
-
-#projectsIcon:hover {
-    color: white;
-    transition: 1s;
-}
-
-#contactIcon {
-    color: teal;
-}
-
-#contactIcon:hover {
-    color: white;
-    transition: 1s;
-}
-
-@media only screen and (max-width: 1200px) {
-    #fullMenu {
-        height: 100%;
-    }
-
-    #menuOptions h2 {
-        color: white;
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 54px;
-        margin-bottom: 30px;
-    }
-
-    #menuButton {
-        position: absolute;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    #menuButton {
-        position: absolute;
-        font-size: 22px;
-    }
-}
-
 /*HOME*/
+#spaceShuttle {
+    position: absolute;
+    bottom: 450px;
+    left: 20px;
+}
+
+#iss {
+    position: absolute;
+    top: 350px;
+    right: 0px;
+}
+
 .section1 {
     height: auto;
     display: flex;
@@ -179,28 +131,6 @@
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
 }
-
-@media only screen and (max-width: 660px) {
-
-    #section1Content p {
-        font-size: 14px;
-        line-height: 22px;
-        top: 250px;
-    }
-}
-
-@media only screen and (max-height: 600px) {
-    .section1 {
-        height: 500px;
-    }
-
-    #section1Content p {
-        font-size: 14px;
-        line-height: 22px;
-        top: 250px;
-    }
-}
-
 
 /*PROJECTS*/
 .section3 {
@@ -312,7 +242,7 @@
         margin-top: 20px;
   }
 
-  .flip-card-back p {
+  .workCard p {
       padding: 0 10px;
       font-family: 'Raleway', sans-serif;
       line-height: 18px;
@@ -326,49 +256,6 @@
       display: none;
   }
 
-@media only screen and (max-width: 600px) {
-
-    .flip-card {
-        width: 320px;
-    }
-
-}
-
-@media only screen and (max-width: 360px) {
-
-    .flip-card {
-        width: 300px;
-    }
-
-}
-
-@media (hover: none) {
-
-    .smallScreenText {
-        display: flex;
-        max-width: 500px;
-        margin-top: 15px;
-    }
-
-    .flip-card:hover .flip-card-inner {
-        transform: none;
-      }
-
-    .workCard .smallScreenText {
-        text-align: center;
-        color: white;
-    }
-
-    .workCard p {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 300;
-        margin: 10px 5px 20px 5px;
-    }
-
-    .flip-card-back {
-        display: none;
-    }
-}
 
 /*CONTACT*/
 .section4 {
@@ -486,8 +373,24 @@
     font-family: 'Roboto Condensed',sans-serif;
 }
 
+/*media queries*/
 
 @media only screen and (max-width: 1200px) {
+    #fullMenu {
+        height: 100%;
+    }
+
+    #menuOptions h2 {
+        color: white;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 54px;
+        margin-bottom: 30px;
+    }
+
+    #menuButton {
+        position: absolute;
+    }
+
     .section4 {
         height: auto;
     }
@@ -512,6 +415,11 @@
 }
 
 @media only screen and (max-width: 700px) {
+    #menuButton {
+        position: absolute;
+        font-size: 22px;
+    }
+
     #section4Content form {
         width: 350px;
     }
@@ -519,6 +427,20 @@
     #section4Content form textarea {
         width: 350px;
     }
+
+    #section1Content p {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .flip-card {
+        width: 320px;
+    }
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -528,5 +450,38 @@
     
     #section4Content form textarea {
         width: 300px;
+    }
+
+    .flip-card {
+        width: 300px;
+    }
+}
+
+/*remove card effects on devices that don't support hover*/
+@media (hover: none) {
+
+    .smallScreenText {
+        display: flex;
+        max-width: 500px;
+        margin-top: 15px;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+      }
+
+    .workCard .smallScreenText {
+        text-align: center;
+        color: white;
+    }
+
+    .workCard p {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        margin: 10px 5px 20px 5px;
+    }
+
+    .flip-card-back {
+        display: none;
     }
 }
