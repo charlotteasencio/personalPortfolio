@@ -1,4 +1,6 @@
-$(document).ready(function () {
+/*IN PROGRESS, FLYING SPACE SHUTTLES*/
+
+/*$(document).ready(function () {
 
     var startPosition =  $('#spaceShuttle').position().left;
     var speed = 3.5;
@@ -15,4 +17,4 @@ $(document).ready(function () {
         })
     });
 
-});
+});*/

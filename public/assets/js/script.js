@@ -27,21 +27,10 @@ const c = canvas.getContext('2d');
 
 let colors = ["#dc143c", "#75afa8", "#d9b449", "#008080"];
 
-const headerPDiv = document.getElementById('heading3')
-
-headerPDiv.style.height = canvas.height / 4;
-headerPDiv.style.width = canvas.width / 3;
-
-let rectangle = headerPDiv.getBoundingClientRect()
-
-console.log(rectangle)
-
-
 addEventListener('resize', () => {
     canvas.height = innerHeight - 80;
     canvas.width = innerWidth;
 
-    rectangle = headerPDiv.getBoundingClientRect()
     init();
 })
 
@@ -369,16 +358,6 @@ function init() {
 
                         //start the loop over to make sure new particles generated aren't overlapping
                         j = -1
-                    }
-                }
-
-                for(let k=0; k < circleArray.length; k++) {
-                    if(circleArray[k].x + circleArray[k].radius * 2 >= rectangle.left && circleArray[k].x - circleArray[k].radius * 2 <= rectangle.right 
-                        && circleArray[k].y - circleArray[k].radius * 2 <= rectangle.bottom && circleArray[k].y + circleArray[k].radius * 2 >= rectangle.top){
-                            circleArray[k].x = Math.floor(Math.random() * (canvas.width - radius - radius + 1) + radius)
-                            circleArray[k].y = Math.floor(Math.random() * (canvas.height - radius - radius + 1) + radius)
-                        
-                        k = -1
                     }
                 }
             }
