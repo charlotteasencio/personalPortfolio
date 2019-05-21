@@ -2,18 +2,24 @@
 
 /*$(document).ready(function () {
 
-    var startPosition =  $('#spaceShuttle').position().left;
-    var speed = 3.5;
-
+    //move space shuttle, saturn, and iss images across the screen on scroll once
     $(window).scroll(function () {
-        var move = $(this).scrollTop();
-        var newPos = (move * speed) + startPosition;
         $('#spaceShuttle').css({
-            'left': newPos,
+           'left': 1000 + 'px',
+           'bottom': 100 + '%',
+           'transition': 4 + 's'
         });
 
-        $("#iss").css({
-            'right': move
+        $('#saturn').css({
+            'left': -20 + 'px',
+            'top': 100 + '%',
+            'transition': 7 + 's'
+         });
+
+        $('#iss').css({
+            'bottom': 100 + '%',
+            'right': 100 + '%',
+            'transition': 2.5 + 's'
         })
     });
 

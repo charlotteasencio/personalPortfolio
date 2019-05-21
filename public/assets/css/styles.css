@@ -13,7 +13,7 @@
     visibility: hidden;
 }
 
-
+/*hide menu until button clicked*/
 #fullMenu.hidden {
     width: 0px;
     left: -400px;
@@ -47,6 +47,7 @@
     display: none;
 }
 
+/*align menu options and style them*/
 #menuOptions {
     display: flex;
     flex-direction: column;
@@ -62,6 +63,7 @@
     margin-top: 30px;
 }
 
+/*color change on hover over option with*/
 #menuOptions h2:hover {
     color: gray;
     transition: 1s;
@@ -79,19 +81,29 @@
 }
 
 /*HOME*/
-/*IN PROGRESS, flying space shuttles*/
+
+/*in progress!*/
+/*position elements that move on scroll*/
 /*#spaceShuttle {
     position: absolute;
-    bottom: 450px;
+    bottom: 0px;
     left: 20px;
+}
+
+#saturn {
+    position: absolute;
+    top: 50px;
+    left: 100%;
 }
 
 #iss {
     position: absolute;
-    top: 350px;
+    bottom: 0px;
     right: 0px;
 }*/
 
+
+/*style section1*/
 .section1 {
     height: auto;
     display: flex;
@@ -99,6 +111,7 @@
     background: rgb(28, 28, 28);
 }
 
+/*add an overlay to make text more readable above animation*/
 #overlay {
     width: 100%;
     height: 100%;
@@ -185,6 +198,7 @@
     padding: 20px 0;
 }
 
+/*style the whole care for each project*/
 .workCard {
     display: flex;
     flex-direction: column;
@@ -213,84 +227,86 @@
 }
 
 .flip-card {
-    background-color: transparent;
+    background-color: black;
     width: 500px;
     height: 300px;
     perspective: 1000px;
   }
 
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
+.flip-card-inner {
     height: 100%;
-    text-align: center;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    box-shadow: 5px 5px 10px rgba(12, 12, 12, 0.459);
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
+    display: flex;
+}
 
-  .flip-card-front {
-    background-color: rgb(95, 95, 95);
-  }
- 
-  .flip-card-back {
-    background-color: rgb(95, 95, 95);
-    color: white;
-    transform: rotateY(180deg);
+.flip-card-front {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: fill;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.flip-card-back {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+/*add hover effect for devices that allow hover*/
+.flip-card:hover .flip-card-front {
+    opacity: 0.05;
+}
+  
+.flip-card:hover .flip-card-back {
+    opacity: 1;
+}
+
+.flip-card-back h5 {
+    margin-top: 20px;
+}
+
+.flip-card-back a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.flip-card-back p {
+    font-family: 'Raleway', sans-serif;
+    line-height: 22px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+/*text for devices that don't support hover hidden on devices that do*/
+.smallScreenText {
+    display: none;
+}
+
+.codeLinks {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-  }
+    align-items: center;
+    margin-top: 25px;
+}
 
-  .flip-card-back a {
-      text-decoration: none;
-      color: rgb(72, 72, 72);
-  }
-
-  .button {
-        background-color: rgb(117,175,168);
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 5px 10px;
-        margin-bottom: 15px;
-  }
-
-  .codeLinks {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-  }
-
-  .workCard p {
-      padding: 0 10px;
-      font-family: 'Raleway', sans-serif;
-      line-height: 18px;
-  }
-
-  .flip-card-back h5 {
-      margin-top: 20px;
-  }
-
-  .smallScreenText {
-      display: none;
-  }
-
+.button {
+    background-color: rgb(117,175,168);
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
 
 /*CONTACT*/
 .section4 {
@@ -409,7 +425,6 @@
 }
 
 /*media queries*/
-
 @media only screen and (max-width: 1200px) {
     #fullMenu {
         height: 100%;
@@ -466,12 +481,11 @@
     #section1Content #description {
         font-size: 14px;
         line-height: 22px;
-        padding: 0 10px;
+        top: 250px;
     }
 }
 
 @media only screen and (max-width: 600px) {
-
     .flip-card {
         width: 320px;
     }
@@ -483,15 +497,16 @@
 }
 
 @media only screen and (max-width: 400px) {
+
+    .flip-card {
+        width: 300px;
+    }
+
     #section4Content form {
         width: 300px;
     }
     
     #section4Content form textarea {
-        width: 300px;
-    }
-
-    .flip-card {
         width: 300px;
     }
 }
@@ -521,6 +536,18 @@
     }
 
     .flip-card-back {
+        display: none;
+    }
+
+    #spaceShuttle {
+        display: none;
+    }
+    
+    #saturn {
+        display: none;
+    }
+    
+    #iss {
         display: none;
     }
 }
