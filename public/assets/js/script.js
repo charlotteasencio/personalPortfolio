@@ -23,7 +23,7 @@ scrollToTop = (className) => {
 const canvas = document.querySelector('canvas');
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight - 100;
+canvas.height = window.innerHeight - 80;
 
 const c = canvas.getContext('2d');
 
