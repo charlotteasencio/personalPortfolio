@@ -1,221 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="./assets/images/CA.png"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400|Roboto" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" type="image/png" href="./assets/images/CA.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400|Roboto:200,300"
+      rel="stylesheet"
+    />
     <title>Charlotte Asencio</title>
-</head>
-<body>
-        
+  </head>
+  <body>
     <div id="menuButton" onclick="openFullMenu()">
-        <i id="openButton" class="fas fa-bars"></i>
-        <i id="closeButton" class="fas fa-times hidden"></i>
+      <i id="openButton" class="fas fa-bars"></i>
+      <i id="closeButton" class="fas fa-times hidden"></i>
     </div>
 
     <div id="fullMenu" class="hidden">
-        <div id="menuOptions">
-            <div class="inlineDiv"><h2 onclick="scrollToAbout('section1')">About</h2></div>
-            <div class="inlineDiv"><h2 onclick="scrollToAbout('section3')">Projects</h2></div>
-            <div class="inlineDiv"><h2 onclick="scrollToAbout('section4')">Contact</h2></div>
+      <div id="menuOptions">
+        <div class="inlineDiv">
+          <h2 onclick="scrollToAbout('section1')">About</h2>
         </div>
+        <div class="inlineDiv">
+          <h2 onclick="scrollToAbout('section3')">Projects</h2>
+        </div>
+        <div class="inlineDiv">
+          <h2 onclick="scrollToAbout('section4')">Contact</h2>
+        </div>
+      </div>
     </div>
-    <!--<img id="spaceShuttle" src="./assets/images/spaceShuttle.png">
-    <img id="iss" src="./assets/images/littleISS.png">
-    <img id="saturn" src="./assets/images/saturn.png">-->
-    <div class="section1" id="section1">
 
-        <div id="section1Content">
-            <div class="typing"><h1>Hi! I'm Charlotte Asencio.</h1></div>
-            <div id="description">A Front-End Developer with a background in Social Work, who is interested in the way technology can be used to improve lives through access to services and information. 
-                I care about creating beautiful, fun, and inclusive web experiences. I mainly work with HTML, CSS, and JavaScript, but also have experience working with other technologies and frameworks including jQuery, Node.js, React, and Angular.</div>
-        </div>
-        <div id="overlay"></div>
-        <canvas></canvas>
+    <div class="section1" id="section1">
+      <div id="section1Content">
+        <div class="typing"><h1>Hi! I'm Charlotte Asencio</h1></div>
+        <h1 class="section1Description">
+          A Front End Developer
+        </h1>
+        <button class="section1Button" onclick="scrollToTop('section3')">
+          See My Work
+        </button>
+      </div>
+      <div class="overlay"></div>
+      <canvas></canvas>
     </div>
 
     <div class="section3" id="section3">
-        <div id="projectLinks">      
-            <div class="workCard">
-            <h2>Pay It Forward</h2>
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                                <a href="https://serene-tor-77077.herokuapp.com/" target="_blank"><img src="assets/images/payitforward.png" alt="payitforward"></a>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="centerText">
-                                <p>An example of a web app built with React, CSS, and Firebase that helps connect volunteers with volunteer opportunities.</p>
-                            </div>
-                            <div class="codeLinks">
-                                <a href="https://serene-tor-77077.herokuapp.com/" class="button" target="_blank">Demo</a>
-                                <a href="https://github.com/charlotteasencio/payitforwardstyled.git" target="_blank"><i aria-hidden="true" style="font-size: 1.75em; color: white" class="fab fa-github"></i><span class="sr-only">github repository</span></a>
-                            </div>
-                        </div>
-                    </div>
+      <div id="projectLinks">
+        <div class="workCard">
+          <h2>Pay It Forward</h2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <a
+                  href="https://serene-tor-77077.herokuapp.com/"
+                  target="_blank"
+                  ><img src="assets/images/payitforward.png" alt="payitforward"
+                /></a>
+              </div>
+              <div class="flip-card-back">
+                <div class="centerText">
+                  <p>
+                    An example of a web app built with React, CSS, and Firebase
+                    that helps connect volunteers with volunteer opportunities.
+                  </p>
                 </div>
-                <div class="smallScreenText">
-                    <p>An example of a web app built with React, CSS, and Firebase that helps connect volunteers with volunteer opportunities.</p>
+                <div class="codeLinks">
+                  <a
+                    href="https://serene-tor-77077.herokuapp.com/"
+                    class="button"
+                    target="_blank"
+                    >Demo</a
+                  >
+                  <a
+                    href="https://github.com/charlotteasencio/payitforwardstyled.git"
+                    target="_blank"
+                    ><i
+                      aria-hidden="true"
+                      style="font-size: 1.75em; color: white"
+                      class="fab fa-github"
+                    ></i
+                    ><span class="sr-only">github repository</span></a
+                  >
                 </div>
-            </div>  
+              </div>
+            </div>
+          </div>
+          <div class="smallScreenText">
+            <p>
+              An example of a web app built with React, CSS, and Firebase that
+              helps connect volunteers with volunteer opportunities.
+            </p>
+          </div>
+        </div>
 
         <div class="workCard">
-            <h2>ISS Locator</h2>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <a href="https://charlotteasencio.github.io/spaceStationLocation/" target="_blank"><img src="assets/images/spaceStationLocation.png" alt="InternationalSpaceStation"></a>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="centerText">
-                            <p>A JavaScript app that uses Google Maps and "Where the ISS At?" API to show the approximate current location of the International Space Station.
-                            </p>
-                    </div>
-                        <div class="codeLinks">
-                            <a href="https://charlotteasencio.github.io/spaceStationLocation/" class="button" target="_blank">Demo</a>
-                            <div class="sourceCode"><a href="https://github.com/charlotteasencio/spaceStationLocation" target="_blank"><i aria-hidden="true" style="font-size: 1.75em; color: white" class="fab fa-github"></i><span class="sr-only">github repository</span></a></div>
-                        </div>
-                    </div>
+          <h2>ISS Locator</h2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <a
+                  href="https://charlotteasencio.github.io/spaceStationLocation/"
+                  target="_blank"
+                  ><img
+                    src="assets/images/spaceStationLocation.png"
+                    alt="InternationalSpaceStation"
+                /></a>
+              </div>
+              <div class="flip-card-back">
+                <div class="centerText">
+                  <p>
+                    A JavaScript app that uses Google Maps and "Where the ISS
+                    At?" API to show the approximate current location of the
+                    International Space Station.
+                  </p>
                 </div>
+                <div class="codeLinks">
+                  <a
+                    href="https://charlotteasencio.github.io/spaceStationLocation/"
+                    class="button"
+                    target="_blank"
+                    >Demo</a
+                  >
+                  <div class="sourceCode">
+                    <a
+                      href="https://github.com/charlotteasencio/spaceStationLocation"
+                      target="_blank"
+                      ><i
+                        aria-hidden="true"
+                        style="font-size: 1.75em; color: white"
+                        class="fab fa-github"
+                      ></i
+                      ><span class="sr-only">github repository</span></a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="smallScreenText">
-                <p>A JavaScript app that uses Google Maps and "Where the ISS At?" API to show the approximate current location of the International Space Station.
-                </p>
-            </div>
-        </div>  
+          </div>
+          <div class="smallScreenText">
+            <p>
+              A JavaScript app that uses Google Maps and "Where the ISS At?" API
+              to show the approximate current location of the International
+              Space Station.
+            </p>
+          </div>
+        </div>
 
         <div class="workCard">
-        <h2>Do I Need An Umbrella?</h2>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <a href="https://github.com/charlotteasencio/umbrellaTextMessage" target="_blank"><img src="assets/images/umbrellaMessage.jpg" alt="umbrellaMessage"></a>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="centerText">
-                            <p>A Node.js app built using the Twilio and the OpenWeatherMap APIs that allows verified users to text a US city to a phone number a receive a response
-                                    telling them if they need an umbrella according to current weather.
-                            </p>
-                        </div>
-                        <div class="codeLinks">
-                            <a href="https://github.com/charlotteasencio/umbrellaTextMessage" target="_blank"><i aria-hidden="true" style="font-size: 1.75em; color: white" class="fab fa-github"></i><span class="sr-only">github repository</span></a>
-                        </div>
-                    </div>
+          <h2>Do I Need An Umbrella?</h2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <a
+                  href="https://github.com/charlotteasencio/umbrellaTextMessage"
+                  target="_blank"
+                  ><img
+                    src="assets/images/umbrellaMessage.jpg"
+                    alt="umbrellaMessage"
+                /></a>
+              </div>
+              <div class="flip-card-back">
+                <div class="centerText">
+                  <p>
+                    A Node.js app built using the Twilio and the OpenWeatherMap
+                    APIs that allows verified users to text a US city to a phone
+                    number a receive a response telling them if they need an
+                    umbrella according to current weather.
+                  </p>
                 </div>
-            </div>
-            <div class="smallScreenText">
-                <p>A Node.js app built using the Twilio and the OpenWeatherMap API that allows verified users to text a US city to a phone number a receive a response
-                    telling them if they need an umbrella according to current weather.
-                </p>
-            </div>
-        </div> 
-        
-        <div class="workCard">
-        <h2>Space Facts</h2>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <a href="https://charlotteasencio.github.io/spaceFacts/" target="_blank"><img id="projectImage" src="./assets/images/spacefacts.png" alt="spacefacts"></a>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="centerText">
-                            <p>A single screen app built with HTML Canvas and JavaScript that displays an animation of "stars" and "constellations" along with space facts.</p>
-                        </div>
-                        <div class="codeLinks">
-                            <a href="https://charlotteasencio.github.io/spaceFacts/" class="button" target="_blank">Demo</a>
-                            <a href="https://github.com/charlotteasencio/spaceFacts" target="_blank"><i aria-hidden="true" style="font-size: 1.75em; color: white" class="fab fa-github"></i><span class="sr-only">github repository</span></a>
-                        </div>
-                    </div>
+                <div class="codeLinks">
+                  <a
+                    href="https://github.com/charlotteasencio/umbrellaTextMessage"
+                    target="_blank"
+                    ><i
+                      aria-hidden="true"
+                      style="font-size: 1.75em; color: white"
+                      class="fab fa-github"
+                    ></i
+                    ><span class="sr-only">github repository</span></a
+                  >
                 </div>
+              </div>
             </div>
-            <div class="smallScreenText">
-                <p>A single screen app built with HTML Canvas and JavaScript that displays an animation of "stars" and "constellations" along with space facts.</p>
-            </div>
-        </div> 
+          </div>
+          <div class="smallScreenText">
+            <p>
+              A Node.js app built using the Twilio and the OpenWeatherMap API
+              that allows verified users to text a US city to a phone number a
+              receive a response telling them if they need an umbrella according
+              to current weather.
+            </p>
+          </div>
+        </div>
 
         <div class="workCard">
-            <h2>Gif Selector</h2>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <a href="https://charlotteasencio.github.io/AjaxGif/" target="_blank"><img src="assets/images/tvShowGifs.png" alt="gif"></a>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="centerText">
-                            <p>Built using the Giphy API, this app displays GIFs from popular TV shows and allows users to add their own TV shows.</p>
-                        </div>
-                        <div class="codeLinks">
-                            <a href="https://charlotteasencio.github.io/AjaxGif/" class="button" target="_blank">Demo</a>
-                            <a href="https://github.com/charlotteasencio/AjaxGif.git" target="_blank"><i aria-hidden="true" style="font-size: 1.75em; color: white" class="fab fa-github"></i><span class="sr-only">github repository</span></a>
-                        </div>
-                    </div>  
+          <h2>Space Facts</h2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <a
+                  href="https://charlotteasencio.github.io/spaceFacts/"
+                  target="_blank"
+                  ><img
+                    id="projectImage"
+                    src="./assets/images/spacefacts.png"
+                    alt="spacefacts"
+                /></a>
+              </div>
+              <div class="flip-card-back">
+                <div class="centerText">
+                  <p>
+                    A single screen app built with HTML Canvas and JavaScript
+                    that displays an animation of "stars" and "constellations"
+                    along with space facts.
+                  </p>
                 </div>
+                <div class="codeLinks">
+                  <a
+                    href="https://charlotteasencio.github.io/spaceFacts/"
+                    class="button"
+                    target="_blank"
+                    >Demo</a
+                  >
+                  <a
+                    href="https://github.com/charlotteasencio/spaceFacts"
+                    target="_blank"
+                    ><i
+                      aria-hidden="true"
+                      style="font-size: 1.75em; color: white"
+                      class="fab fa-github"
+                    ></i
+                    ><span class="sr-only">github repository</span></a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="smallScreenText">
-                <p>Built using the Giphy API, this app displays GIFs from popular TV shows and allows users to add their own TV shows.</p>
-            </div>
-        </div> 
-    
+          </div>
+          <div class="smallScreenText">
+            <p>
+              A single screen app built with HTML Canvas and JavaScript that
+              displays an animation of "stars" and "constellations" along with
+              space facts.
+            </p>
+          </div>
+        </div>
+
         <div class="workCard">
-        <h2>Liri Bot</h2>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <a href="https://github.com/charlotteasencio/liri-node-app.git" target="_blank"><img src="assets/images/liri.png" alt="liri"></a>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="centerText">
-                            <p>A Node.js command line app that follows commands given by the user. It utilizes the Spotify, Twitter, and OMDB APIs to return information.</p>
-                        </div>
-                        <div class="codeLinks">
-                            <a href="https://github.com/charlotteasencio/liri-node-app.git" target="_blank"><i aria-hidden="true" style="font-size: 1.75em; color: white" class="fab fa-github"></i><span class="sr-only">github repository</span></a>
-                        </div>
-                    </div>  
+          <h2>Gif Selector</h2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <a
+                  href="https://charlotteasencio.github.io/AjaxGif/"
+                  target="_blank"
+                  ><img src="assets/images/tvShowGifs.png" alt="gif"
+                /></a>
+              </div>
+              <div class="flip-card-back">
+                <div class="centerText">
+                  <p>
+                    Built using the Giphy API, this app displays GIFs from
+                    popular TV shows and allows users to add their own TV shows.
+                  </p>
                 </div>
+                <div class="codeLinks">
+                  <a
+                    href="https://charlotteasencio.github.io/AjaxGif/"
+                    class="button"
+                    target="_blank"
+                    >Demo</a
+                  >
+                  <a
+                    href="https://github.com/charlotteasencio/AjaxGif.git"
+                    target="_blank"
+                    ><i
+                      aria-hidden="true"
+                      style="font-size: 1.75em; color: white"
+                      class="fab fa-github"
+                    ></i
+                    ><span class="sr-only">github repository</span></a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="smallScreenText">
-                <p>A Node.js command line app that follows commands given by the user. It utilizes the Spotify, Twitter, and OMDB APIs to return information.</p>
+          </div>
+          <div class="smallScreenText">
+            <p>
+              Built using the Giphy API, this app displays GIFs from popular TV
+              shows and allows users to add their own TV shows.
+            </p>
+          </div>
+        </div>
+
+        <div class="workCard">
+          <h2>Liri Bot</h2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <a
+                  href="https://github.com/charlotteasencio/liri-node-app.git"
+                  target="_blank"
+                  ><img src="assets/images/liri.png" alt="liri"
+                /></a>
+              </div>
+              <div class="flip-card-back">
+                <div class="centerText">
+                  <p>
+                    A Node.js command line app that follows commands given by
+                    the user. It utilizes the Spotify, Twitter, and OMDB APIs to
+                    return information.
+                  </p>
+                </div>
+                <div class="codeLinks">
+                  <a
+                    href="https://github.com/charlotteasencio/liri-node-app.git"
+                    target="_blank"
+                    ><i
+                      aria-hidden="true"
+                      style="font-size: 1.75em; color: white"
+                      class="fab fa-github"
+                    ></i
+                    ><span class="sr-only">github repository</span></a
+                  >
+                </div>
+              </div>
             </div>
-        </div> 
+          </div>
+          <div class="smallScreenText">
+            <p>
+              A Node.js command line app that follows commands given by the
+              user. It utilizes the Spotify, Twitter, and OMDB APIs to return
+              information.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
 
     <div class="section4">
-        <div id="section4Content">
-            <h1>Connect With Me</h1>
-              <form action="mailto:charlotte.e.asencio@gmail.com" method="POST" enctype="text/plain">
-                  <div class="inputRow">
-                    <label for="name-input">Name</label>
-                    <input class="form-control" id="name-input" type="text" name="Name: ">
-                  </div>
-                  <div class="inputRow">
-                    <label for="email-input">Email</label>
-                    <input class="form-control" id="email-input" type="email" name="Reply To: ">
-                  </div>
-                  <div class="inputRow">
-                    <label for="comment-input">Message</label>
-                    <textarea class="form-control" id="comment-input" rows="5" name="Message: "></textarea>
-                  </div>
-                  <button id="submitButton" type="submit">Submit</button>
-                </form>
-                <div id="centerLinks">
-                  <a href="https://github.com/charlotteasencio" target="_blank"><span style="font-size: 3em; color: white"><i aria-hidden="true" class="fab fa-github"></i><span class="sr-only">github profile</span></span></a>
-                  <a href="https://www.linkedin.com/in/charlotte-asencio-7b84b164" target="_blank"><span style="font-size: 3em; color: white"><i aria-hidden="true" class="fab fa-linkedin"></i><span class="sr-only">linkedin profile</span></span></a>
-                  <a href="mailto:charlotte.e.asencio@gmail.com"><span style="color: white; font-size: 3em"><i aria-hidden="true" class="far fa-envelope"></i><span class="sr-only">send me an email</span></span></a>
-                  <a href="./assets/charlotteAsencioResume.pdf" target="_blank" id="resumeDiv"><i class="fa fa-file" style="color: white; font-size: 40px;" aria-hidden="true"></i><p>Resume</p></a>
-                </div>
+      <div id="section4Content">
+        <h1>Connect With Me</h1>
+        <form
+          action="mailto:charlotte.e.asencio@gmail.com"
+          method="POST"
+          enctype="text/plain"
+        >
+          <div class="inputRow">
+            <label for="name-input">Name</label>
+            <input
+              class="form-control"
+              id="name-input"
+              type="text"
+              name="Name: "
+            />
+          </div>
+          <div class="inputRow">
+            <label for="email-input">Email</label>
+            <input
+              class="form-control"
+              id="email-input"
+              type="email"
+              name="Reply To: "
+            />
+          </div>
+          <div class="inputRow">
+            <label for="comment-input">Message</label>
+            <textarea
+              class="form-control"
+              id="comment-input"
+              rows="5"
+              name="Message: "
+            ></textarea>
+          </div>
+          <button id="submitButton" type="submit">Submit</button>
+        </form>
+        <div id="centerLinks">
+          <a href="https://github.com/charlotteasencio" target="_blank"
+            ><span style="font-size: 3em; color: white"
+              ><i aria-hidden="true" class="fab fa-github"></i
+              ><span class="sr-only">github profile</span></span
+            ></a
+          >
+          <a
+            href="https://www.linkedin.com/in/charlotte-asencio-7b84b164"
+            target="_blank"
+            ><span style="font-size: 3em; color: white"
+              ><i aria-hidden="true" class="fab fa-linkedin"></i
+              ><span class="sr-only">linkedin profile</span></span
+            ></a
+          >
+          <a href="mailto:charlotte.e.asencio@gmail.com"
+            ><span style="color: white; font-size: 3em"
+              ><i aria-hidden="true" class="far fa-envelope"></i
+              ><span class="sr-only">send me an email</span></span
+            ></a
+          >
+          <a
+            href="./assets/charlotteAsencioResume.pdf"
+            target="_blank"
+            id="resumeDiv"
+            ><i
+              class="fa fa-file"
+              style="color: white; font-size: 40px;"
+              aria-hidden="true"
+            ></i>
+            <p>Resume</p></a
+          >
         </div>
-        <div id="section4UpArrow" onclick="scrollToTop('section1')"><span style="color: #dc143c; font-size: 4em"><i aria-hidden="true" class="fas fa-angle-up"></i></span></div>
-        <a href="https://github.com/charlotteasencio/personalPortfolio" target="_blank">Source Code <i id="laptop" class="fas fa-laptop-code"></i></a>
+      </div>
+      <div id="section4UpArrow" onclick="scrollToTop('section1')">
+        <span style="color: #dc143c; font-size: 4em"
+          ><i aria-hidden="true" class="fas fa-angle-up"></i
+        ></span>
+      </div>
+      <a
+        href="https://github.com/charlotteasencio/personalPortfolio"
+        target="_blank"
+        >Source Code <i id="laptop" class="fas fa-laptop-code"></i
+      ></a>
     </div>
-<script src="../assets/js/script.js"></script>
-<script src="../assets/js/jquery.js"></script>
-</body>
+    <script src="../assets/js/script.js" async></script>
+  </body>
 </html>
