@@ -166,8 +166,8 @@
   box-shadow: 5px 5px rgb(255, 255, 255);
 }
 
-.section1Button:active {
-  box-shadow: 3px 3px rgb(255, 255, 255);
+.section1Button:hover {
+  box-shadow: 8px 8px rgb(255, 255, 255);
 }
 
 .overlay {
@@ -204,10 +204,14 @@
   margin: 20px;
 }
 
-.workCard img {
+.workcard__image {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.workCard p {
+  margin-bottom: 10px;
 }
 
 .workCard h2 {
@@ -529,6 +533,8 @@
   .workCard .smallScreenText {
     text-align: center;
     color: white;
+    display: flex;
+    flex-direction: column;
   }
 
   .workCard p {
